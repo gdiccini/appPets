@@ -20,6 +20,7 @@ export const CustomButton = styled.TouchableOpacity`
   height: 44px;
   justify-content: center;
 `;
+
 export const CustomButtonText = styled.Text`
   color: #FFFFFF;
   font-size: 24px;
@@ -33,10 +34,12 @@ export const SignMessageButton = styled.TouchableOpacity`
   margin-top: 50px;
   margin-bottom: 20px;
 `;
+
 export const SignMessageButtonText = styled.Text`
   color: #FFF;
   font-size: 18px;
 `;
+
 export const SignMessageButtonTextBold = styled.Text`
   color: #FFF;
   font-size: 18px;
