@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components/native';
 
 const InputArea = styled.View`
-  align- items: center;
+  align-items: center;
   background-color: #FFFFFF;
   border-radius: 10px;
   height: 44px;

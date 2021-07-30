@@ -43,3 +43,11 @@ export const SignMessageButtonTextBold = styled.Text`
   font-style: italic;
   margin-left: 5px;
 `;
+
+export const Footer = styled.View`
+  background-color: #5FC6AE;
+  bottom: 0;
+  height: 17px;
+  position: absolute;
+  width: 100%;
+`;

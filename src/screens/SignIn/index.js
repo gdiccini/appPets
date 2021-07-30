@@ -8,7 +8,8 @@ import {
   CustomButtonText,
   SignMessageButton,
   SignMessageButtonText,
-  SignMessageButtonTextBold
+  SignMessageButtonTextBold,
+  Footer
 } from './styles';
 
 import SignInput from '../../components/SignInput'
@@ -60,6 +61,8 @@ export default () => {
         <SignMessageButtonText>Ainda não tem uma conta?</SignMessageButtonText>
         <SignMessageButtonTextBold>Cadastre-se</SignMessageButtonTextBold>
       </SignMessageButton>
+
+      <Footer />
     </Container>
   );
 };

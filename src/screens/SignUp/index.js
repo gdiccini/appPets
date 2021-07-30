@@ -4,16 +4,21 @@ import { Image } from 'react-native';
 import {
   Container,
   InputArea,
+  SignUpText,
   CustomButton,
   CustomButtonText,
   SignMessageButton,
   SignMessageButtonText,
-  SignMessageButtonTextBold
+  SignMessageButtonTextBold,
+  Footer
 } from './styles';
 
-import SignInput from '../../components/SignInput'
+import SignInput from '../../components/SignInput';
+import SignWith from '../../components/SignWith';
 
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.png';
+import fbIcon from '../../assets/fb.png';
+import googleIcon from '../../assets/gmail.png';
 
 export default () => {
 
@@ -21,6 +26,7 @@ export default () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleSignButton = () => {
 
@@ -36,6 +42,7 @@ export default () => {
   return (
     <Container>
       <Image source={logo} style={{ width: 285, height: 128 }} />
+      <SignUpText>Cadastre-se para começar!</SignUpText>
       <InputArea>
 
         <SignInput
@@ -50,10 +57,10 @@ export default () => {
           value={password}
         />
         <SignInput
-          onChangeText={ (text) => setPassword(text) }
+          onChangeText={ (text) => setConfirmPassword(text) }
           password={true}
           placeholder="Confirmar senha"
-          value={password}
+          value={confirmPassword}
         />
 
         <CustomButton onPress={handleSignButton}>
@@ -62,10 +69,26 @@ export default () => {
 
       </InputArea>
 
-      <SignMessageButton onPress={handleMessageButtonClick}>
+      <SignUpText style={{ marginTop: 5, marginBottom: 8 }}>ou</SignUpText>
+
+      <InputArea>
+        <SignWith
+          color="#4364AF"
+          icon={fbIcon}
+          text="Continue com Facebook"
+        />
+        <SignWith
+          color="#4381F0"
+          icon={googleIcon}
+          text="Continue com Google"
+        />
+      </InputArea>
+
+      <SignMessageButton>
         <SignMessageButtonText>Ainda não tem uma conta?</SignMessageButtonText>
         <SignMessageButtonTextBold>Cadastre-se</SignMessageButtonTextBold>
       </SignMessageButton>
+      <Footer />
     </Container>
   );
 };
