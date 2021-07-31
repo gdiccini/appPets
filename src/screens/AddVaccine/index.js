@@ -36,7 +36,10 @@ export default () => {
         placeholder="Responsável"
         value={responsible}
       />
-      <Observations />
+      <Observations
+        onChangeText={ (text) => setObservations(text) }
+        value={observations}
+      />
       <SaveBtn />
     </Container>
   );

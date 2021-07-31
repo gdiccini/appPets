@@ -22,6 +22,7 @@ export default ({ value, onChangeText }) => {
   return (
     <InputArea>
       <Input
+        style={ !value ? { fontStyle:'italic' } : {} }
         multiline={true}
         numberOfLines={20}
         onChangeText={onChangeText}

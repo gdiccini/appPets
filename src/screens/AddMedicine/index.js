@@ -10,18 +10,19 @@ import Input from '../../components/Input';
 import Observations from '../../components/Observations';
 import SaveBtn from '../../components/SaveBtn';
 
-import VaccineImage from '../../assets/add-medicine.png'
+import MedicineImage from '../../assets/add-medicine.png'
 
 export default () => {
   const [medicine, setMedicine] = useState('');
   const [interval, setInterval] = useState('');
   const [days, setDays] = useState('');
   const [responsible, setResponsible] = useState('');
+  const [observations, setObservations] = useState('');
 
   return (
     <Container>
       <XBtn />
-      <TopImage imageSource={VaccineImage} />
+      <TopImage imageSource={MedicineImage} />
       <Input
         onChangeText={ (text) => setMedicine(text) }
         placeholder="Nome do Medicamento"
@@ -42,7 +43,10 @@ export default () => {
         placeholder="Responsável"
         value={responsible}
       />
-      <Observations />
+      <Observations
+        onChangeText={ (text) => setObservations(text) }
+        value={observations}
+      />
       <SaveBtn />
     </Container>
   );

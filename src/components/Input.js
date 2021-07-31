@@ -22,6 +22,7 @@ export default ({ placeholder, value, onChangeText }) => {
   return (
     <InputArea>
       <Input
+        style={ !value ? { fontStyle: 'italic' } : {} }
         onChangeText={onChangeText}
         placeholder={placeholder}
         placeholderTextcolor="#A1A1A1"
