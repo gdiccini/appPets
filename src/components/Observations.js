@@ -8,7 +8,7 @@ const InputArea = styled.View`
   box-shadow: 0px 3px 6px #00000029;
   height: 113px;
   justify-content: center;
-  margin-bottom: 16px;
+  margin-bottom: 117px;
   padding: 21px 20px;
   width: 358px;
 `;
